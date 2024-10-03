@@ -13,6 +13,10 @@ def home():
 @app.route("/add", methods=("GET", "POST"))
 def add():
 
+    # Check if they are logged in first
+    if session.get('username') is None:
+        return redirect("/login")
+
     if request.method == "POST":
         date = request.form["date"]
         score = request.form["score"]

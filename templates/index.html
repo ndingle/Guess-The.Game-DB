@@ -9,7 +9,7 @@
 <p><a href="/register">Register</a></p>
 {% endif %}
 
-<p><a href="/add">Add a new score</a></p>
+{% if session['username'] %}<p><a href="/add">Add a new score</a></p> {% endif %}
 
 <table border="1">
     <thead>
