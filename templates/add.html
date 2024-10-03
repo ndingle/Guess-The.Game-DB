@@ -1,0 +1,19 @@
+{% include "base.html" %}
+
+<p>Time to add a new score.</p>
+
+<form action="/add" method="post">
+    <label>Date: </label>
+    <input type="date" value="2024-10-03" name="date" id="date">
+    <br>
+    <label>Score: </label>
+    <input type="number" min="0" max="6" name="score" id="score">
+    <br>
+    <label>Game: </label>
+    <input type="text" name="game" id="game" required>
+    <br>
+    <label>Guesser: </label>
+    <input type="text" name="guesser" id="guesser" required>
+    <br>
+    <button type="submit">Add score</button>
+</form>

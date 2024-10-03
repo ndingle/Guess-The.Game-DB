@@ -1,0 +1,24 @@
+{% include "base.html" %}
+
+<p>Below is a collection of scores for Year 12 SE playing <a href="httsp://guessthe.game/">Guess The.Game</a></p>
+
+<p><a href="/add">Add a new score</a></p>
+
+<table border="1">
+    <thead>
+        <th>Date</th>
+        <th>Score</th>
+        <th>Game</th>
+        <th>Guesser</th>
+    </thead>
+    <tbody>
+        {% for row in guesses %}
+            <tr>
+                <td>{{ row['date'] }}</td>
+                <td>{{ row['score'] }}</td>
+                <td>{{ row['game'] }}</td>
+                <td>{{ row['guesser'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
