@@ -1,6 +1,13 @@
 {% include "base.html" %}
 
-<p>Below is a collection of scores for Year 12 SE playing <a href="httsp://guessthe.game/">Guess The.Game</a></p>
+<p>Below is a collection of scores for Year 12 SE playing <a href="https://guessthe.game/">Guess The.Game</a></p>
+
+{% if session['username'] %}
+<p>Hello {{ session['username'] }}. <a href="/logout">Logout</a></p>
+{% else %}
+<p><a href="/login">Login</a></p>
+<p><a href="/register">Register</a></p>
+{% endif %}
 
 <p><a href="/add">Add a new score</a></p>
 
